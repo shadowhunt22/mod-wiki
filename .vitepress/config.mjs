@@ -41,6 +41,10 @@ export default defineConfig({
             { text: "APIs", link: "/apis/" },
         ],
 
+        footer: {
+            copyright: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International 2024 © ShadowHunter22"
+        },
+
         logo: "/icon.png",
 
         sidebar: {
