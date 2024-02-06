@@ -31,7 +31,7 @@ export default defineConfig({
     description: "Information about the mods created by ShadowHunter22.",
     base: "/mod-wiki/",
 
-    head: [["link", { rel: "icon", href: "./favicon.ico" }]],
+    head: [['link', { rel: 'icon', href: '/mod-wiki/favicon.ico' }]],
 
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
