@@ -74,7 +74,8 @@ export default defineConfig({
                 {
                     text: "Simple Health Indicator",
                     items: [
-                        // links to each header
+                        { text: "Mod Information", link: "/mods/simple-health-indicator/" },
+                        { text: "Configuration", link: "/mods/simple-health-indicator/configuration" },
                     ],
                 },
             ],
