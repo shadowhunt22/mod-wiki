@@ -68,6 +68,8 @@
     --vp-c-danger-2: var(--vp-c-red-2);
     --vp-c-danger-3: var(--vp-c-red-3);
     --vp-c-danger-soft: var(--vp-c-red-soft);
+
+    --vp-sidebar-width: 300px;
 }
 
 ::-webkit-scrollbar {
@@ -239,7 +241,7 @@ div[class*="language-"],
     }
 }
 
-
+/* My customizations */
 
 .VPHomeHero > .container > .main > .name {
     max-width: 1280px !important;
@@ -251,4 +253,82 @@ div[class*="language-"],
     font-weight: 500 !important;
     font-size: 20pt !important;
     line-height: 42px !important;
+}
+
+/* Light Mode for Details Block */
+
+details {
+    border: 0.15rem solid #e5e7eb;
+    border-radius: 0.5rem;
+
+    padding: 0.5rem 0.5rem 0 !important;
+
+    display: block !important;
+
+    margin-top: 0 !important;
+    margin-bottom: 16px !important;
+}
+
+details summary {
+    background-color: #e5e7eb;
+    border-radius: 0.25rem;
+    font-weight: 700;
+
+    margin: -0.5rem -0.5rem 0 !important;
+    padding: 0.5rem 0.8rem !important;
+
+    cursor: pointer;
+}
+
+details, summary:hover {
+    filter: brightness(0.85);
+}
+  
+details > ul {
+    margin: 0;
+    font-weight: 450;
+    position: relative;
+    left: 25px;
+}
+
+/* Dark Mode for Details Block */
+
+:root.dark details {
+    border: 0.15rem solid #434856;
+    border-radius: 0.5rem;
+
+    padding: 0.5rem 0.5rem 0 !important;
+
+    display: block !important;
+
+    margin-top: 0 !important;
+    margin-bottom: 16px !important;
+}
+
+:root.dark details summary {
+    background-color: #434856;
+    border-radius: 0.25rem;
+    font-weight: 700;
+
+    margin: -0.5rem -0.5rem 0 !important;
+    padding: 0.5rem 0.8rem !important;
+
+    cursor: pointer;
+}
+
+:root.dark details, summary:hover {
+    filter: brightness(0.85);
+}
+  
+details > ul {
+    margin: 0;
+    font-weight: 450;
+    position: relative;
+    left: 25px;
+}
+
+.mod-icon {
+    position: absolute;
+    left: -110px;
+    top: -17.5px;
 }
