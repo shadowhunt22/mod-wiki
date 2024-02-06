@@ -4,7 +4,7 @@ outline: deep
 
 <div id="mod-header">
 
-# Armor Indicator
+# MOD
 
 <img src="./_assets/icon.png" width='75px' height='75px' draggable="false" class="mod-icon" />
 
@@ -12,19 +12,15 @@ outline: deep
 
 ## Information and Description
 
-This client-side mod adds a simple armor indicator onto the screen so you do not have to access your inventory to view your armor durability.
-
-To use this mod, download the mod it and move it to your `.minecraft/mods` folder. Additionally, you will need to install the Fabric API jar for this mod to work.
-
-The settings for this mod can be customized if you install the Cloth Config API mod in addition to this mod (see [#versions](#versions) to find compatible versions). This menu can be opened by pressing `RSHIFT`, or reassigned to your liking through the game's keybind menu. Otherwise, default values will be applied.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae congue mauris rhoncus aenean vel elit. Ut aliquam purus sit amet. Vulputate sapien nec sagittis aliquam. Arcu risus quis varius quam quisque id. Mattis nunc sed blandit libero volutpat.
 
 ## Features
 
-- An armor indicator overlay, configurable with the Cloth Config API.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae congue mauris rhoncus aenean vel elit.
 
-- An indicator for the current item you are holding, configurable with the Cloth Config API
-
-- With the Cloth Config API, you are provided a number of options to customize this mod to your liking. 
+- Lorem ipsum dolor sit amet
+- Lorem ipsum dolor sit amet
+- Lorem ipsum dolor sit amet
 
 ## Versions
 
@@ -112,3 +108,5 @@ This mod is available for the following Minecraft versions (click the version to
 Client: **Required**
 
 Server: **Unsupported**
+
+## Other Notes  

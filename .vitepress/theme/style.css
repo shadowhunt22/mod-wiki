@@ -329,6 +329,23 @@ details > ul {
 
 .mod-icon {
     position: absolute;
-    left: -110px;
+    left: 0px;
     top: -17.5px;
+}
+
+#mod-header > h1 {
+    position: relative;
+    left: 90px;
+}
+
+#mod-header > h1 > a {
+    display: none;
+}
+
+.configuration-group {
+    color: var(--vp-c-brand-1)
+}
+
+.configuration-option {
+    color: var(--vp-c-brand-2)
 }

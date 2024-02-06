@@ -63,7 +63,8 @@ export default defineConfig({
                 {
                     text: "Armor Indicator",
                     items: [
-                        // links to each header
+                        { text: "Mod Information", link: "/mods/armor-indicator/" },
+                        { text: "Configuration", link: "/mods/armor-indicator/configuration" },
                     ],
                 },
             ],
