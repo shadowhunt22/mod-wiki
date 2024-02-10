@@ -28,9 +28,6 @@ This mod is **Fabric** ONLY.  There is no plan to support Forge.
 
 This mod is available for the following Minecraft versions (click the version to reveal the FAPI and Cloth Config API version needed):
 
-> [!NOTE]
-> Although links are provided for the Fabric API and Cloth Config API mods, they may not be the newest versions.
-
 <details>
 <summary>1.19.2</summary>
   
@@ -102,6 +99,9 @@ This mod is available for the following Minecraft versions (click the version to
 - Cloth Config API version: <a href="https://modrinth.com/mod/cloth-config/version/13.0.121+fabric" target="_blank"> 13.0.121 </a>
 
 </details>
+
+> [!NOTE]
+> Although links are provided for the Fabric API and Cloth Config API mods, they may not be the newest versions.
 
 ## Client and Server Support
 

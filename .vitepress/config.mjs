@@ -89,7 +89,7 @@ export default defineConfig({
                 {
                     text: "Realistic Campfires",
                     items: [
-                        // links to each header
+                        { text: "Mod Information", link: "/mods/realistic-campfires/" },
                     ],
                 },
             ],
@@ -113,7 +113,7 @@ export default defineConfig({
                 {
                     text: "Alternate HudRendererCallback",
                     items: [
-                        // links to each header
+                        { text: "API Information", link: "/apis/alternate-hudrenderercallback/"}
                     ],
                 },
             ],

@@ -349,3 +349,7 @@ details > ul {
 .configuration-option {
     color: var(--vp-c-brand-2)
 }
+
+api-version {
+    color: var(--vp-c-brand-1);
+}
