@@ -10,7 +10,16 @@ const allModsCategoriesSection = [
                 text: "Simple Health Indicator",
                 link: "/mods/simple-health-indicator/",
             },
-            { text: "Realistic Campfires", link: "/mods/realistic-campfires/" },
+            { text: "Realistic Campfires", link: "/mods/realistic-campfires/" }
+        ],
+    },
+];
+
+const allHiddenCategoriesSection = [
+    {
+        text: "Fabric Mods",
+        items: [
+            { text: "Compound Bow", link: "/hidden/mods/compound-bow/" },
         ],
     },
 ];
@@ -90,6 +99,27 @@ export default defineConfig({
                     text: "Realistic Campfires",
                     items: [
                         { text: "Mod Information", link: "/mods/realistic-campfires/" },
+                    ],
+                },
+            ],
+
+            "/hidden/mods/": [
+                ...allHiddenCategoriesSection,
+                {
+                    text: "Getting Started",
+                    items: [
+                        // links to each header
+                    ],
+                },
+            ],
+
+            "/hidden/mods/compound-bow/": [
+                ...allHiddenCategoriesSection,
+                {
+                    text: "Compound Bow",
+                    items: [
+                        { text: "Mod Information", link: "/hidden/mods/compound-bow/" },
+                        { text: "Recipes", link: "/hidden/mods/compound-bow/recipes" },
                     ],
                 },
             ],

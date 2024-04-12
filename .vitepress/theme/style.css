@@ -353,3 +353,7 @@ details > ul {
 api-version {
     color: var(--vp-c-brand-1);
 }
+
+.recipe-obtaining {
+    color: var(--vp-c-brand-1);
+}
