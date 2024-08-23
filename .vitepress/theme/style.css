@@ -357,3 +357,7 @@ api-version {
 .recipe-obtaining {
     color: var(--vp-c-brand-1);
 }
+
+version > p > code {
+    margin-right: 5px;
+}

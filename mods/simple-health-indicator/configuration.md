@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# MOD | Configuration
+# Simple Health Indicator | Configuration
 
 ##
 

@@ -10,7 +10,10 @@ const allModsCategoriesSection = [
                 text: "Simple Health Indicator",
                 link: "/mods/simple-health-indicator/",
             },
-            { text: "Realistic Campfires", link: "/mods/realistic-campfires/" }
+            { text: "Realistic Campfires", link: "/mods/realistic-campfires/" },
+            { text: "Cloud Dash", link: "/mods/cloud-dash/" },
+            { text: "Ore Extraction", link: "/mods/ore-extraction/" },
+            { text: "Ender Eyes", link: "/mods/ender-eyes/" },
         ],
     },
 ];
@@ -99,6 +102,38 @@ export default defineConfig({
                     text: "Realistic Campfires",
                     items: [
                         { text: "Mod Information", link: "/mods/realistic-campfires/" },
+                    ],
+                },
+            ],
+
+            "/mods/cloud-dash/": [
+                ...allModsCategoriesSection,
+                {
+                    text: "Cloud Dash",
+                    items: [
+                        { text: "Mod Information", link: "/mods/cloud-dash/" },
+                        { text: "Configuration", link: "/mods/cloud-dash/configuration" },
+                    ],
+                },
+            ],
+
+            "/mods/ore-extraction/": [
+                ...allModsCategoriesSection,
+                {
+                    text: "Ore Extraction",
+                    items: [
+                        { text: "Mod Information", link: "/mods/ore-extraction/" },
+                    ],
+                },
+            ],
+
+            "/mods/ender-eyes/": [
+                ...allModsCategoriesSection,
+                {
+                    text: "Ender Eyes",
+                    items: [
+                        { text: "Mod Information", link: "/mods/ender-eyes/" },
+                        { text: "Configuration", link: "/mods/ender-eyes/configuration" },
                     ],
                 },
             ],
