@@ -9,4 +9,4 @@ This wiki aims to centeralize information about my APIs.  Each section will give
 Here is an up-to-date list of my APIs (in order of release):
 
 - [Alternate HudRendererCallback](/apis/alternate-hudrenderercallback/)
-- [Enchantment Text Color](/apis/enchantment-text-color/)
+- [Enchantment Text Styling](/apis/enchantment-text-styling/)
