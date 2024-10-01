@@ -32,7 +32,7 @@ repositories {
 
 dependencies {
     // see below for #versions of this API
-    modImplementation 'com.github.shadowhunt22:enchantments-text-styling:{release_version}' 
+    modImplementation 'com.github.shadowhunt22:enchantment-text-styling:{release_version}' 
 }
 ```
 
