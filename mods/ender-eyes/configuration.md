@@ -22,7 +22,7 @@ outline: deep
 
 - 1x1 
 - 1x2
-- 2x1 (default)
+- 2x1 `default`
 
 <div class="configuration-option">
 

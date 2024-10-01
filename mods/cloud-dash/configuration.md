@@ -20,7 +20,8 @@ outline: deep
 
 </div>
 
-- Boolean (default: false)
+- True 
+- False `default`
 
 <div class="configuration-option">
 
@@ -28,7 +29,8 @@ outline: deep
 
 </div>
 
-- Boolean (default: false)
+- True 
+- False `default`
 
 <div class="configuration-option">
 
@@ -36,4 +38,5 @@ outline: deep
 
 </div>
 
-- Boolean (default: true)
+- True `default`
+- False

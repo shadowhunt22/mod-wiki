@@ -14,6 +14,8 @@ const allModsCategoriesSection = [
             { text: "Cloud Dash", link: "/mods/cloud-dash/" },
             { text: "Ore Extraction", link: "/mods/ore-extraction/" },
             { text: "Ender Eyes", link: "/mods/ender-eyes/" },
+            { text: "Enchantment Tooltips", link: "/mods/enchantment-tooltips/" },
+            { text: "Chestplate Aegis", link: "/mods/chestplate-aegis/" },
         ],
     },
 ];
@@ -33,6 +35,7 @@ const allApisCategoriesSection = [
         items: [
             { text: "Getting Started", link: "/apis/" },
             { text: "Alternate HudRendererCallback", link: "/apis/alternate-hudrenderercallback/" },
+            { text: "Enchantment Text Styling", link: "/apis/enchantment-text-styling/" },
         ],
     },
 ];
@@ -137,6 +140,27 @@ export default defineConfig({
                     ],
                 },
             ],
+            
+            "/mods/enchantment-tooltips/": [
+                ...allModsCategoriesSection,
+                {
+                    text: "Enchantment Tooltips",
+                    items: [
+                        { text: "Mod Information", link: "/mods/enchantment-tooltips/" },
+                        { text: "Configuration", link: "/mods/enchantment-tooltips/configuration" },
+                    ],
+                },
+            ],
+
+            "/mods/chestplate-aegis/": [
+                ...allModsCategoriesSection,
+                {
+                    text: "Chestplate Aegis",
+                    items: [
+                        { text: "Mod Information", link: "/mods/chestplate-aegis/" },
+                    ],
+                },
+            ],
 
             "/hidden/mods/": [
                 ...allHiddenCategoriesSection,
@@ -179,6 +203,17 @@ export default defineConfig({
                     text: "Alternate HudRendererCallback",
                     items: [
                         { text: "API Information", link: "/apis/alternate-hudrenderercallback/"}
+                    ],
+                },
+            ],
+
+            "/apis/enchantment-text-styling/": [
+                ...allApisCategoriesSection,
+                {
+                    text: "Enchantment Text Styling",
+                    items: [
+                        { text: "API Information", link: "/apis/enchantment-text-styling/"},
+                        { text: "Data Formats", link: "/apis/enchantment-text-styling/data-formats"}
                     ],
                 },
             ],
