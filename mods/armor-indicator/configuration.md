@@ -25,7 +25,7 @@ outline: deep
 
 </div>
 
-- Basic (default)
+- Basic `default`
 - Fancy
 
 <div class="configuration-option">
@@ -34,7 +34,7 @@ outline: deep
 
 </div>
 
-- Bottom (default)
+- Bottom `default`
 - Middle
 - Top
 
@@ -45,7 +45,7 @@ outline: deep
 </div>
 
 - Left
-- Right (default)
+- Right `default`
 
 <div class="configuration-option">
 
@@ -53,7 +53,7 @@ outline: deep
 
 </div>
 
-- True (default)
+- True `default`
 - False
 
 <div class="configuration-option">
@@ -62,7 +62,7 @@ outline: deep
 
 </div>
 
-- True (default)
+- True `default`
 - False
 
 <div class="configuration-option">
@@ -71,7 +71,7 @@ outline: deep
 
 </div>
 
-- True (default)
+- True `default`
 - False
 
 <div class="configuration-option">
@@ -80,7 +80,7 @@ outline: deep
 
 </div>
 
-- True (default)
+- True `default`
 - False
 
 <div class="configuration-group">
@@ -97,7 +97,7 @@ outline: deep
 
 </div>
 
-- True (default)
+- True `default`
 - False
 
 <div class="configuration-option">
@@ -107,4 +107,4 @@ outline: deep
 </div>
 
 - Left
-- Right (default)
+- Right `default`

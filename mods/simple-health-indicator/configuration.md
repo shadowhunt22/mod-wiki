@@ -4,11 +4,6 @@ outline: deep
 
 # Simple Health Indicator | Configuration
 
-##
-
-> [!NOTE]
-> To access these options, you need to install the <a href="https://modrinth.com/mod/cloth-config" target="_blank">Cloth Config API</a> and put it in your `.minecraft/mods` folder. 
-
 ## Options
 
 <div class="configuration-group">
@@ -25,7 +20,7 @@ outline: deep
 
 </div>
 
-- Left (default)
+- Left `default`
 - Right
 
 <div class="configuration-option">
@@ -34,5 +29,5 @@ outline: deep
 
 </div>
 
-- Decimal (default)
+- Decimal `default`
 - Integer
