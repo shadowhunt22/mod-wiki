@@ -21,7 +21,7 @@ This API is **Fabric** ONLY, with support for the following versions:
 
 ## Developing with the API
 
-The only public, usable, API this "library" provides is a data generator to make the creation of a datapack for this mod useful.  To look how the data is formattied or learn how to manually create a datapack, see [Data Formats](/apis/enchantment-text-styling/data-formats.md).
+The only public, usable, API this "library" provides is a data generator to make the creation of a datapack for this mod easier.  To look how the data is formatted or learn how to manually create a datapack, see [Data Formats](/apis/enchantment-text-styling/data-formats.md).
 
 To start developing with this API, add the following to your build.gradle:
 
