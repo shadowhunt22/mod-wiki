@@ -64,11 +64,14 @@ public class EnchantmentTextStylingData extends EnchantmentTextStylingProvider {
 
 		this.addEntry(Enchantments.PROTECTION)
             .color(Formatting.RED.getColorValue())
+            .bold()
+            .italic()
             .specificCondition(1)
             .add();
 
 		this.addEntry(Enchantments.BLAST_PROTECTION)
             .color(Formatting.GREEN.getColorValue())
+            .underlined()
             .min(2)
             .max(3)
             .add();
@@ -78,6 +81,12 @@ public class EnchantmentTextStylingData extends EnchantmentTextStylingProvider {
             .min(1)
             .max(2)
             .add();
+
+        this.addEntry(Enchantments.VANISHING_CURSE)
+            .color(Formatting.RED.getColorValue())
+            .strikethrough()
+            .obfuscated()
+            .add();
     }
 }
 ```
@@ -86,7 +95,31 @@ public class EnchantmentTextStylingData extends EnchantmentTextStylingProvider {
 
 Here are details about each method you can use in the method chain:
 
-### add(int value)
+### addEntry(RegistryKey&lt;Enchantment&gt; enchantment)
+
+The enchantment to add styling to.  Starts the method chain.
+
+### bold()
+
+Make the text bold.
+
+### italic()
+
+Make the text italic.
+
+### underlined()
+
+Make the text underlined.
+
+### strikethrough()
+
+Make the text strikethrough.
+
+### obfuscated()
+
+Make the text obfuscated.
+
+### color(int)
 
 The color of the enchantment text.
 

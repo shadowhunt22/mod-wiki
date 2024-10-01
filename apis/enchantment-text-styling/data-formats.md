@@ -4,15 +4,9 @@ outline: deep
 
 # Enchantment Text Styling Data Formats
 
-## Explanation
+## Enchantment
 
-Enchantment Text Styling looks for JSON files in the `data/enchantment-text-color/styling/[namespace]/[enchantment-name].json` directories, where 
-
-`[namespace]` is a namespace (such as `minecraft` or `modid`)
-
-`[enchantment-name]` is the path id of the enchantment (such as `protection` or `binding_curse`).
-
-The objects stored in these files must be in an array (see [Examples](#examples)).
+Enchantment files defines the styles that will be applied to an enchantment's text.  By default, this mod does not come with any datapacks, rather, it is up to the datapack or modpack creator, or the mod developer, to create these entires.  These files are loaded from `data/enchantment-text-color/styling/[namespace]/[enchantment_name].json`, and all objects must be in an array (see below for examples).
 
 <table>
     <tr>
@@ -21,25 +15,150 @@ The objects stored in these files must be in an array (see [Examples](#examples)
         <th>Required</th>
     </tr>
     <tr>
-        <th>enchantment</th>
-        <th>A string for the identifier of an enchantment to apply styling to.</th>
+        <th>
+          <code>enchantment</code>
+        </th>
+        <th>A string for the identifier of an enchantment to apply styling to its text.</th>
         <th>Yes</th>
     </tr>
     <tr>
-        <th>color</th>
         <th>
-          An integer representing an RBG color.  Use a tool like <a href="http://www.shodor.org/~efarrow/trunk/html/rgbint.html" target="_about">shodor.org</a> to convert an value RGB to an integer.
+          <code>styles</code>
+        </th>
+        <th>
+          A required object containing the styling information of an enchantment's text.
         </th>
         <th>Yes</th>
     </tr>
     <tr>
-        <th>conditions</th>
-        <th>An optional object with the following integer fields: "value," "min," "max"</th>
+        <th>
+          <code>conditions</code>
+        </th>
+        <th>An optional object containing the conditions in which the styling will be applied to the enchantment's text</th>
         <th>No</th>
     </tr>
 </table>
 
+## Styles
+
+<table>
+    <tr>
+        <th>Field</th>
+        <th>Default</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <th>
+          <code>color</code>
+        </th>
+        <th>required</th>
+        <th>An integer representing an RBG color.  Use a tool like <a href="http://www.shodor.org/~efarrow/trunk/html/rgbint.html" target="_about">shodor.org</a> to convert an RGB value to an integer.</th>
+    </tr>
+    <tr>
+        <th>
+          <code>bold</code>
+        </th>
+        <th>
+          <code>false</code>
+        </th>
+        <th>Bold style</th>
+    </tr>
+    <tr>
+        <th>
+          <code>italic</code>
+        </th>
+        <th>
+          <code>false</code>
+        </th>
+        <th>Italic style</th>
+    </tr>
+    <tr>
+        <th>
+          <code>underlined</code>
+        </th>
+        <th>
+          <code>false</code>
+        </th>
+        <th>Underlined style</th>
+    </tr>
+    <tr>
+        <th>
+          <code>strikethrough</code>
+        </th>
+        <th>
+          <code>false</code>
+        </th>
+        <th>Strikethrough style</th>
+    </tr>
+    <tr>
+        <th>
+          <code>obfuscated</code>
+        </th>
+        <th>
+          <code>false</code>
+        </th>
+        <th>Obfuscated style</th>
+    </tr>
+</table>
+
+## Conditions
+
+<table>
+    <tr>
+        <th>Field</th>
+        <th>Default</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <th>
+          <code>value</code>
+        </th>
+        <th>
+          <code>none</code>
+        </th>
+        <th>Apply styling to a specific enchantment level</th>
+    </tr>
+    <tr>
+        <th>
+          <code>min</code>
+        </th>
+        <th>
+          <code>none</code>
+        </th>
+        <th>Apply styling to a minimum enchantment level</th>
+    </tr>
+    <tr>
+        <th>
+          <code>max</code>
+        </th>
+        <th>
+          <code>none</code>
+        </th>
+        <th>Apply styling to a maximum enchantment level</th>
+    </tr>
+</table>
+
 ## Examples
+
+### Styling
+
+Here is how to write a styling for an enchantment with Minecraft's different text styles:
+
+```json
+[
+  {
+    "enchantment": "namespace:id",
+    "styles": {
+      "color": 16733525,
+      "bold": true,
+      "italic": true,
+      "underlined": true,
+      "strikethrough": true,
+      "obfuscated": true
+    }
+  }
+]
+```
 
 ### Specific Level
 
