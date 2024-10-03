@@ -166,7 +166,7 @@ Here is how to write a styling for an enchantment with Minecraft's different tex
 
 ### Specific Level
 
-To change the color of Proection to red if its level is 2, create a `protection.json` file and place it in `data/enchantment-text-styling/styling/enchantment` with the following data:
+To change the color of `Protection I` to red, create a `protection.json` file and place it in `data/enchantment-text-styling/styling/enchantment` with the following data:
 
 ```json
 {
@@ -202,7 +202,7 @@ This allows you to have one color for `Protection I` and a different color for `
 
 ### Minimum Level
 
-To change the color of Proection to red if it is level 3 or above, create a `protection.json` file and place it in `data/enchantment-text-styling/styling/enchantment` with the following data:
+To change the color of `Protection III` or above, create a `protection.json` file and place it in `data/enchantment-text-styling/styling/enchantment` with the following data:
 
 ```json
 {
@@ -218,7 +218,7 @@ To change the color of Proection to red if it is level 3 or above, create a `pro
 
 ### Maximum Level
 
-To change the color of Proection to red if it is level 2 or below, create a `protection.json` file and place it in `data/enchantment-text-styling/styling/enchantment` with the following data:
+To change the color of `Protection II` or below, create a `protection.json` file and place it in `data/enchantment-text-styling/styling/enchantment` with the following data:
 
 ```json
 {
@@ -226,7 +226,7 @@ To change the color of Proection to red if it is level 2 or below, create a `pro
   "styles": [
     {
       "color": 16733525,
-      "conditions": { "max": 3 }
+      "conditions": { "max": 2 }
     }
   ]
 }
@@ -234,7 +234,7 @@ To change the color of Proection to red if it is level 2 or below, create a `pro
 
 ### Minimum and Maximum Level
 
-To change the color of Proection to red if it is level 2 or above and level 4 or below, create a `protection.json` file and place it in `data/enchantment-text-styling/styling/enchantment` with the following data:
+To change the color of `Protection II, III` and `IV` to red if it is level 2 or above and level 4 or below, create a `protection.json` file and place it in `data/enchantment-text-styling/styling/enchantment` with the following data:
 
 ```json
 {
