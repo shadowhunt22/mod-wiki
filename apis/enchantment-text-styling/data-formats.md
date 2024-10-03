@@ -6,7 +6,7 @@ outline: deep
 
 ## Enchantment
 
-Enchantment files defines the styles that will be applied to an enchantment's text.  By default, this mod does not come with any datapacks, rather, it is up to the datapack or modpack creator, or the mod developer, to create these entires.  These files are loaded from `data/enchantment-text-color/styling/[namespace]/[enchantment_name].json`, and all objects must be in an array (see below for examples).
+Enchantment files defines the styles that will be applied to an enchantment's text.  By default, this mod does not come with any datapacks, rather, it is up to the datapack or modpack creator, or the mod developer, to create these entires.  These files are loaded from `data/enchantment-text-color/styling/enchantment/[enchantment_name].json`.
 
 <table>
     <tr>
@@ -26,16 +26,9 @@ Enchantment files defines the styles that will be applied to an enchantment's te
           <code>styles</code>
         </th>
         <th>
-          A required object containing the styling information of an enchantment's text.
+          An object containing the styling information of an enchantment's text and the conditions of when it will be applied.
         </th>
         <th>Yes</th>
-    </tr>
-    <tr>
-        <th>
-          <code>conditions</code>
-        </th>
-        <th>An optional object containing the conditions in which the styling will be applied to the enchantment's text</th>
-        <th>No</th>
     </tr>
 </table>
 
@@ -44,97 +37,108 @@ Enchantment files defines the styles that will be applied to an enchantment's te
 <table>
     <tr>
         <th>Field</th>
-        <th>Default</th>
         <th>Description</th>
+        <th>Default</th>
     </tr>
     <tr>
         <th>
           <code>color</code>
         </th>
-        <th>required</th>
         <th>An integer representing an RBG color.  Use a tool like <a href="http://www.shodor.org/~efarrow/trunk/html/rgbint.html" target="_about">shodor.org</a> to convert an RGB value to an integer.</th>
+        <th>
+          <code>required</code>
+        </th>
     </tr>
     <tr>
         <th>
           <code>bold</code>
         </th>
+        <th>Bold style</th>
         <th>
           <code>false</code>
         </th>
-        <th>Bold style</th>
     </tr>
     <tr>
         <th>
           <code>italic</code>
         </th>
+        <th>Italic style</th>
         <th>
           <code>false</code>
         </th>
-        <th>Italic style</th>
     </tr>
     <tr>
         <th>
           <code>underlined</code>
         </th>
+        <th>Underlined style</th>
         <th>
           <code>false</code>
         </th>
-        <th>Underlined style</th>
     </tr>
     <tr>
         <th>
           <code>strikethrough</code>
         </th>
+        <th>Strikethrough style</th>
         <th>
           <code>false</code>
         </th>
-        <th>Strikethrough style</th>
     </tr>
     <tr>
         <th>
           <code>obfuscated</code>
         </th>
+        <th>Obfuscated style</th>
         <th>
           <code>false</code>
         </th>
-        <th>Obfuscated style</th>
+    </tr>
+        <tr>
+        <th>
+          <code>condition</code>
+        </th>
+        <th>An optional object containing conditions of when the above stylings will be applied.</th>
+        <th>
+          <code>none</code>
+        </th>
     </tr>
 </table>
 
-## Conditions
+## Condition
 
 <table>
     <tr>
         <th>Field</th>
-        <th>Default</th>
         <th>Description</th>
+        <th>Default</th>
     </tr>
     <tr>
         <th>
           <code>value</code>
         </th>
+        <th>Apply styling to a specific enchantment level</th>
         <th>
           <code>none</code>
         </th>
-        <th>Apply styling to a specific enchantment level</th>
     </tr>
     <tr>
         <th>
           <code>min</code>
         </th>
+        <th>Apply styling to a minimum enchantment level</th>
         <th>
           <code>none</code>
         </th>
-        <th>Apply styling to a minimum enchantment level</th>
     </tr>
     <tr>
         <th>
           <code>max</code>
         </th>
+        <th>Apply styling to a maximum enchantment level</th>
         <th>
           <code>none</code>
         </th>
-        <th>Apply styling to a maximum enchantment level</th>
     </tr>
 </table>
 
@@ -162,86 +166,87 @@ Here is how to write a styling for an enchantment with Minecraft's different tex
 
 ### Specific Level
 
-To change the color of Proection to red if its level is 2, create a `protection.json` file and place it in `data/enchantment-text-styling/minecraft` with the following data:
+To change the color of Proection to red if its level is 2, create a `protection.json` file and place it in `data/enchantment-text-styling/styling/enchantment` with the following data:
 
 ```json
-[
-  {
-    "enchantment": "minecraft:protection",
-    "color": 16733525,
-    "conditions": {
-      "value": 2
+{
+  "enchantment": "minecraft:protection",
+  "styles": [
+    {
+      "color": 16733525,
+      "conditions": { "value": 1 }
     }
-  }
-]
+  ]
+}
 ```
 
-To add more conditions, add more objects to the array like so:
+To add more conditions, add more objects to the `styles` array like so:
 
 ```json
-[
-  {
-    "enchantment": "minecraft:protection",
-    "color": 16733525,
-    "conditions": {
-      "value": 2
+{
+  "enchantment": "minecraft:protection",
+  "styles": [
+    {
+      "color": 16733525,
+      "conditions": { "value": 1 }
+    },
+    {
+      "color": 16755200,
+      "conditions": { "value": 2 }
     }
-  },
-  {
-    "enchantment": "minecraft:protection",
-    "color": 16733525,
-    "conditions": {
-      "value": 3
-    }
-  }
-]
+  ]
+}
 ```
+
+This allows you to have one color for `Protection I` and a different color for `Protection II`!
 
 ### Minimum Level
 
-To change the color of Proection to red if it is level 3 or above, create a `protection.json` file and place it in `data/enchantment-text-styling/minecraft` with the following data:
+To change the color of Proection to red if it is level 3 or above, create a `protection.json` file and place it in `data/enchantment-text-styling/styling/enchantment` with the following data:
 
 ```json
-[
-  {
-    "enchantment": "minecraft:protection",
-    "color": 16733525,
-    "conditions": {
-      "min": 3
+{
+  "enchantment": "minecraft:protection",
+  "styles": [
+    {
+      "color": 16733525,
+      "conditions": { "min": 3 }
     }
-  }
-]
+  ]
+}
 ```
 
 ### Maximum Level
 
-To change the color of Proection to red if it is level 2 or below, create a `protection.json` file and place it in `data/enchantment-text-styling/minecraft` with the following data:
+To change the color of Proection to red if it is level 2 or below, create a `protection.json` file and place it in `data/enchantment-text-styling/styling/enchantment` with the following data:
 
 ```json
-[
-  {
-    "enchantment": "minecraft:protection",
-    "color": 16733525,
-    "conditions": {
-      "max": 3
+{
+  "enchantment": "minecraft:protection",
+  "styles": [
+    {
+      "color": 16733525,
+      "conditions": { "max": 3 }
     }
-  }
-]
+  ]
+}
 ```
 
 ### Minimum and Maximum Level
 
-To change the color of Proection to red if it is level 2 or above and level 4 or below, create a `protection.json` file and place it in `data/enchantment-text-styling/minecraft` with the following data:
+To change the color of Proection to red if it is level 2 or above and level 4 or below, create a `protection.json` file and place it in `data/enchantment-text-styling/styling/enchantment` with the following data:
 
 ```json
-[
-  {
-    "enchantment": "minecraft:protection",
-    "color": 16733525,
-    "conditions": {
-      "min": 2,
-      "max": 4
+{
+  "enchantment": "minecraft:protection",
+  "styles": [
+    {
+      "color": 16733525,
+      "conditions": { 
+        "min": 2,
+        "max": 4 
+      }
     }
-  }
-]
+  ]
+}
 ```
