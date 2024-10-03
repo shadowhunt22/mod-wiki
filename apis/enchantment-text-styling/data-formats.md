@@ -26,7 +26,7 @@ Enchantment files defines the styles that will be applied to an enchantment's te
           <code>styles</code>
         </th>
         <th>
-          An object containing the styling information of an enchantment's text and the conditions of when it will be applied.
+          An array of objects containing the styling information of an enchantment's text and the conditions of when it will be applied.
         </th>
         <th>Yes</th>
     </tr>
