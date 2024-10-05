@@ -149,10 +149,10 @@ Enchantment files defines the styles that will be applied to an enchantment's te
 Here is how to write a styling for an enchantment with Minecraft's different text styles:
 
 ```json
-[
-  {
-    "enchantment": "namespace:id",
-    "styles": {
+{
+  "enchantment": "namespace:id",
+  "styles": [
+    {
       "color": 16733525,
       "bold": true,
       "italic": true,
@@ -160,8 +160,8 @@ Here is how to write a styling for an enchantment with Minecraft's different tex
       "strikethrough": true,
       "obfuscated": true
     }
-  }
-]
+  ]
+}
 ```
 
 ### Specific Level
